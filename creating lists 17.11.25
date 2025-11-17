@@ -1,0 +1,56 @@
+def nrglvls():
+    first = int(input("What were your energy levels at 7:00?: "))
+    second = int(input("What were your energy levels at 9:30?: "))
+    third = int(input("What were your energy levels at 12:00?: "))
+    fourth = int(input("What were your energy levels at 3:30?: "))
+    fifth = int(input("What were your energy levels at 7:00?: "))
+    throughouttheday = []
+    throughouttheday.append(first)
+    throughouttheday.append(second)
+    throughouttheday.append(third)
+    throughouttheday.append(fourth)
+    throughouttheday.append(fifth)
+    print(throughouttheday)
+    choice = str(input("If you wish to add one more, type 'Yes'..: "))
+    if choice.lower == "yes":
+        adding = str(input("What would you like to add?: "))
+        throughouttheday.append(adding)
+        print("Okay, this is now your list...")
+        print(throughouttheday)
+    else:
+        print("No changes, great!")
+    print(throughouttheday[0])
+    print(throughouttheday[2])
+    print(throughouttheday[4])
+
+def usernames():
+    listofusers = str(input("What are your current usernames on different apps?: "))
+    listofnames = []
+    listofnames.append(listofusers)
+    choice = str(input("If you would like to add one, type 'Yes..: "))
+    if choice.lower == "yes":
+        adding = str(input("What username would you like to add?: "))
+        listofnames.append(adding)
+        print(listofnames.sort)
+    else:
+        print("No changes, great!")
+        print(listofnames.sort)
+    print(listofnames[0])
+    print(listofnames[2])
+    print(listofnames[4])
+
+def taskdosindex():
+    screentimes = [120, 95, 140, 160, 80, 100, 200]
+    print(screentimes[2])
+    average = (screentimes[0] + screentimes[1] + screentimes[2]) / 3
+    print(average)
+    newvalue = 210
+    screentimes[6] = newvalue
+    print(screentimes.max)
+    print(screentimes.min)    
+
+listA = [1, 2, 3]
+listB = [1, "2", 3.0]
+
+print(listA)
+print(listB)
