@@ -54,3 +54,24 @@ listB = [1, "2", 3.0]
 
 print(listA)
 print(listB)
+
+#havent tested any of the functions btw 
+
+notifications = [34, 28, 55, 40, 60, 22, 18]
+print(notifications)
+print("Monday: ", notifications[0])
+print("Tuesday: ", notifications[1])
+print("Wednesday: ", notifications[2])
+print("Thursday: ", notifications[3])
+print("Friday: ", notifications[-3])
+print("Saturday: ", notifications[-2])
+print("Sunday: ", notifications[-1])
+print(notifications[max])
+print(notifications[min])
+total = (notifications[0] + notifications[1] + notifications[2] + notifications[3] + notifications[4] + notifications[5] + notifications[6]) 
+print(total)
+average = total / 7
+print(average)
+new = str(input("What number would you like to add?: "))
+notifications.append(new)
+
