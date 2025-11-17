@@ -1,0 +1,16 @@
+print("Hello, today these are the movies we offer...")
+movieList = ["Shrek 2", "Shrek 4", "Shrek 1", "Shrek 3"]
+print(movieList)
+choice = str(input("Would you like to add any movies for tommorow's viewing?: "))
+if choice.lower() ==  "yes":
+    addingaMovie = str(input("What movie would you like to add?: "))
+    newmovieList = movieList.insert(addingaMovie)
+    newmovieList.sort()
+elif choice.lower() == "no":
+    print("Okay, great!")
+    newmovieList = movieList
+else:
+    print("Please input a yes or no...")
+print(newmovieList)
+
+#cant_add_a_movie

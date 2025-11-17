@@ -1,0 +1,54 @@
+cb = 0
+rounded_km = 0
+hoursoftl = 0
+minsoftl = 0
+packlimit = 0
+leftovertablet = 0
+
+def calburn(cb) :
+    cpm = int(input("How many calories do you burn per minute?: "))
+    workouttime = int(input("How long do you work out for in minutes?: "))
+    #multiplies the calories burned per minute by the length of the workout
+    calc = cpm * workouttime
+    cb = calc
+    #print("Your total calories burned over the course of the workout is",cb)
+    return cb
+
+def conversion(rounded_km):
+    steps = int(input("How many steps have you done?: "))
+    km = steps / 1300
+    #finds out the km, then rounds it to make it an estimation
+    rounded_km = round(km, 2)
+    #print("The KMs when rounded is",rounded_km)
+    return rounded_km
+
+def medicinaltiming(hoursoftl):
+    timelength = int(input("How long does it take between medicine usage? (minutes): "))
+    hoursoftl = timelength // 60
+    minsoftl = timelength % 60
+    #separates the hours and minutes 
+    #print("You should have",hoursoftl,"hours and",minsoftl,"minutes.")
+    return hoursoftl 
+     
+def medicinepack(packlimit):
+    tabletovr = int(input("How many tablets did you pack up?: "))
+    packlimit = tabletovr // 6
+    leftovertablet = tabletovr % 6
+    #divides the total amount of tablets into boxes of 6 and then informs what is leftover
+    #print("After separating all the tablets into the boxes, you should have",leftovertablet,"left over.")
+    #print("You should also have filled up",packlimit,"boxes.")
+    return packlimit
+
+cb = calburn(cb)
+rounded_km = conversion(rounded_km)
+hoursoftl = medicinaltiming(hoursoftl)
+packlimit = medicinepack(packlimit)
+
+print("Your total calories burned over the course of the workout is",cb)
+print("The KMs when rounded is",rounded_km)
+print("You should have",hoursoftl,"hours and",minsoftl,"minutes.")
+print("After separating all the tablets into the boxes, you should have",leftovertablet,"left over.")
+print("You should also have filled up",packlimit,"boxes.")
+
+
+#Orginsation is good, notes help to understand what each part of the code is doing, program is good and works as expected.

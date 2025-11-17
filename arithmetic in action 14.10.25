@@ -1,0 +1,52 @@
+temperature = 0
+oxygen = 0
+heartrate = 0
+option = 0
+
+def tempcheck(temperature):
+    temperature = float(input("What is your temperature right now?: "))
+    if temperature > 37.5:
+        print("You have a fever, your temperature is too high.")
+    elif temperature == 37.5:
+        print("You are too warm.")
+    else:
+        print("Your temperature is okay.")
+    return temperature
+
+def oxygencheck(oxygen):
+    oxygen = int(input("What is the current oxygen level?: "))
+    if oxygen < 92:
+        print("The air quality is too low.")
+    else:
+        print("The air quality is okay.")
+    return oxygen
+
+def heartratecheck(heartrate):
+    heartrate = float(input("What is your current heart rate?: "))
+    if 60 <= heartrate <= 100:
+        print("Your heartrate is normal, you are safe.")
+    else:
+        print("You may be in danger, your HR is too low/high.") 
+    return heartrate
+
+def menu(option):
+    print("1) Temperature Check. 2) Oxygen Check. 3) Heart rate Check.")
+    option = int(input("Please pick option 1, 2 or 3: "))
+    if option == "1":
+        temperature = tempcheck(temperature)
+    elif option == "2":
+        oxygen = oxygencheck(oxygen)
+    elif option == "3":
+        heartrate = heartratecheck(heartrate)
+    else:
+        print("Please pick an option 1, 2 or 3...")
+        menu(option) 
+    return option
+
+option = menu(option)
+
+#work in progress, i cant figure out how to do it
+
+
+
+

@@ -1,0 +1,39 @@
+songs = str(input("What are your favourite songs?: "))
+listofsongs = []
+listofsongs.append(songs)
+print("If you would like to make changes to this list...")
+jeezy = print("Please type 'Add' to add a song or 'Remove' to remove one!")
+if jeezy == "Add":
+    adamant(listofsongs)
+elif jeezy == "Remove":
+    removement(listofsongs)
+else:
+    print("Okay, no changes!")
+
+def removement(listofsongs):
+    remove = str(input("Would you like to remove a song?: "))
+    if remove == "Yes" or "yes":
+        ask1 = int(input("What song would you like to remove, 1, 2, 3, 4 or 5?: "))
+        removed = int(ask1 + 1)
+        number = removed
+        listofsongs.remove(number)
+    elif remove == "No" or "no":
+        print("No song will be removed.") 
+    else:  
+        print("Please input a 'Yes' or 'No'...")
+    return(listofsongs)
+
+def adamant(listofsongs):
+    adding = str(input("Would you like to add a song?: "))
+    if adding == "Yes" or "yes":
+        ask2 = int(input("What song would you like to add?: "))
+        listofsongs.append(ask2)
+    elif adding == "No" or "no":
+        print("No song will be added.")
+    else:
+        print("Please input a 'Yes' or 'No'...")
+    return(listofsongs)
+
+listofsongs.sort()
+print(len(listofsongs))
+print(listofsongs)

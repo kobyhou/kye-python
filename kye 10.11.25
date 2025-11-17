@@ -1,0 +1,16 @@
+#movies = ["Wonka", "Dune 2", "Inside Out 2"]
+#times = ["17:30", "19:15", "20:00"]
+
+arcade = {
+    "key": "machine name",
+    "value": "status",
+}
+
+x=arcade.items()
+print(x)
+
+arcade["key"] = "machine no name"
+print(x)
+
+arcade.update({"key": "watch"})
+print(x)

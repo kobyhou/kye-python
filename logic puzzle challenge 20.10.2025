@@ -1,0 +1,74 @@
+def med_safety():
+    patientage = int(input("What is the patient's age?: "))
+    patientweight = int(input("What is patient's weight?: "))
+    if patientage >= 12 and patientweight >= 40:
+        print("The medication is safe to take.")
+    elif patientage >= 12 and patientweight <= 40:
+        print("Your child is too underweight to take the medicine.")
+    elif patientage < 12 and patientweight >= 40:
+        print("Your child is too young to take the medicine.")
+    elif patientage < 12 and patientweight <= 40:
+        print("Your child is too young and underweight to take the medicine.")
+    else:
+        print("Something went wrong.")
+
+def fit_centre():
+    print("This is a validation test to see if you can enter the intensive zone.")
+    personage = int(input("What is your age?: "))
+    medclearance = str(input("Do you have medical clearance?: "))
+    if personage >= 18 and medclearance == "Yes" or "yes":
+        print("You are eligible to enter the intensive zone!")
+    elif personage < 18 and medclearance == "Yes" or "yes":
+        print("Sorry, you are not old enough.")
+    elif personage >= 18 and medclearance == "No" or "no":
+        print("Sorry, you need medical clearance.")
+    elif personage < 18 and medclearance == "No" or "no":
+        print("You do not meet any of the requirements to join.")
+    else:
+        print("Something went wrong.")
+
+def sleeptrack():
+    sleepcheck = str(input("Are you asleep?: "))
+    hrcheck = int(input("What is your heart rate?: "))
+    if sleepcheck == "No" or "no" and hrcheck >= 100:
+        print("You should be asleep, your heart rate is too high.")
+    if sleepcheck == "" and hrcheck < 100:
+        print("You are sleeping well.")
+    if sleepcheck == "No" or "no" and hrcheck < 100:
+        print("You should be asleep, your heartrate is fine however.")
+    else:
+        print("Something went wrong.")
+
+def menu():
+    print("Option 1: Medicine Safety Rule...")
+    print("Option 2: Fitness Centre Access...")
+    print("Option 3: Sleep Tracker Alert...")
+    menu = str(input("Which option would you like to do?: "))
+    if menu == "1":
+        med_safety()
+        menu()
+    elif menu == "2":
+        fit_centre()
+        menu()
+    elif menu == "3":
+        sleeptrack()
+        menu()
+    else:
+        print("Please pick an option, 1, 2 or 3...")
+
+print("Option 1: Medicine Safety Rule...")
+print("Option 2: Fitness Centre Access...")
+print("Option 3: Sleep Tracker Alert...")
+menu = str(input("Which option would you like to do?: "))
+if menu == "1":
+    med_safety()
+    menu()
+elif menu == "2":
+    fit_centre()
+    menu()
+elif menu == "3":
+   sleeptrack()
+   menu()
+else:
+    print("Please pick an option, 1, 2 or 3...")
+

@@ -1,0 +1,24 @@
+score = 0
+
+def weekscore(score):
+    monday = int(input("What is your step count for Monday?: "))
+    friday = int(input("What is your step count for Friday?: "))
+    if monday > friday:
+        print("You started off the week strong with more steps on Monday than you did Friday!")
+        score = score 
+    elif friday > monday:
+        print("You ended off the week better, getting more steps than you did at the start of the week!")
+        score = score + 1
+    else:
+        print("You must've had the exact same steps, strict routine.")
+
+    weekscore(score)
+    return score
+
+weekscore(score)
+
+#im trying to figure out how to separate the scores for monday and friday.
+
+# = is equaling for comparison whereas == is assigning something to something else
+#for comparing one number against another or a variable against a variable
+#they work together by allowing for different true or false/comparison scenarios 

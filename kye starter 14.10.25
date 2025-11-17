@@ -1,0 +1,18 @@
+level = int(input("What is the oxygen level?: "))
+if level < 95:
+    print("The oxygen level is too little.")
+else:
+    print("The oxygen level is great.")
+
+gluc = float(input("What is your glucose level?: "))
+if gluc > 7.0:
+    print("Your glucose is okay.")
+else:
+    print("It's too low.")
+
+rate = int(input("What is your heart rate?: "))
+if rate == 70:
+    print("Your heart rate is perfect.")
+else:
+    print("It's lower or higher than perfect.")
+    
